@@ -1,0 +1,9 @@
+/* Mise en place du grid de la page Index*/
+main {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+}
+
+/*-------------------------------------------Placement des articles dans le grid----------------------------------------------*/
+
