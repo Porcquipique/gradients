@@ -6,3 +6,7 @@ img {
     height: auto;
     width: 50px;
 }
+
+p {
+    font-size: 12rem;
+}
