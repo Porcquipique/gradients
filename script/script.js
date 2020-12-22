@@ -1,10 +1,11 @@
-let i = Element.style.font-size;
+let i = document.style.getPropertyValue(fontSize);
+console.log(i);
 
 /*----------- Diminution taille police -----------*/ 
 /* Enleve 1 à la taille de la police*/
 function moins() {
     i -= 1;
-    style.font-size = 'i';
+    body.style.fontSize = 'i';
     console.log(i);
 }
 
@@ -12,6 +13,6 @@ function moins() {
 /* Ajoute 1 à la taille de la police*/
 function plus() {
     i += 1;
-    style.font-size = 'i';
+    body.style.fontSize = 'i';
     console.log(i);
 }
