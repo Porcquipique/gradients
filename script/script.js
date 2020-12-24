@@ -1,57 +1,46 @@
- /*- Ce script permet d'augmenter ou de diminuer la taille de la police de la page */
+// Ce script permet d'augmenter ou de diminuer la taille de la police de la page 
 
- /* ========== Initialisation des valeurs ==========*/
+/*******************************************
+* Initialisation des valeurs 
+*******************************************/
 
-    // Récupération de la valeur de fontSize dans le CSS
-const i = window.getComputedStyle(document.querySelector('body')).fontSize;
-    // Récupération de la valeur sans l'unité px
-let nbI = parseFloat(i);
-let result = '';
-
-const body = document.querySelector('body');
 // Def des button + et -
 const buttonPlus = document.querySelector('button:nth-of-type(1)');
 const buttonMoins = document.querySelector('button:nth-of-type(2)');
 
+//Node list
 const tailleP = document.querySelectorAll('p');
 
-/*===== Fonction modification taille ======*/
-function moins(tailleP) {
-    result = nbI - 1;
-    body.style.fontSize = result + 'px';
-    console.log(nbI);
-    return nbI;
+/*******************************************
+* Fonction modification taille
+*******************************************/
+
+function plus(tailleP, onlyNb) {
+    tailleP.style.fontSize = (onlyNb + 3) + 'px';
 }
 
-function plus(tailleP) {
-    result = (nbI + 1) + 'px';
-    body.style.fontSize = result;
-    console.log(nbI);
+function moins(tailleP, onlyNb) {
+    tailleP.style.fontSize = (onlyNb - 3) + 'px';
 }
 
-/*===== Boutton HTML ======*/
-buttonMoins.addEventListener('click', () => {
-    tailleP.forEach((element) =>{
-        moins(element);
-    });
-    console.log(body.style.fontSize);
-});
+/*********************************************
+ * Boutton HTML
+*********************************************/
 
 buttonPlus.addEventListener('click', () => {
+    const i = window.getComputedStyle(document.querySelector('p')).fontSize;
+    const nbI = parseFloat(i);
     tailleP.forEach((element) => {
-        plus(element);
+        plus(element, nbI);
+        console.log(element.style.fontSize);
     });
-    console.log(body.style.fontSize);
 });
 
-
-
-
-/*----------- Augmentation taille police -----------*/ 
-/* Ajoute 1 à la taille de la police*/
-/*function plus() {
-    nbI += 1;
-    result = nbI + 'px';
-    console.log(nbI);
-    console.log(result);
-}*/
+buttonMoins.addEventListener('click', () => {
+    const i = window.getComputedStyle(document.querySelector('p')).fontSize;
+    const nbI = parseFloat(i);
+    tailleP.forEach((element) => {
+        moins(element, nbI);
+        console.log(element.style.fontSize);
+    });
+});
