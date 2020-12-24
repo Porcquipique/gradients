@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
     <link rel="stylesheet" href="style/index.css">
 
     <!-- Script -->
-    <script src="scripts/script.js" defer></script>
+    <!--<script src="scripts/script.js" defer></script>-->
+    <script src="script/generator.js" defer></script>
     <title>Radiant</title>
 </head>
+
 <body>
     <header>
         <h1>Gradients de couleur</h1>
@@ -21,7 +24,35 @@
         <input type="button">
     </header>
     <main>
+        <!-- Article explicatif -->
+        <section>
 
+        </section>
+
+        <!-- Formulaire générateur -->
+        <section>
+            <form>
+
+
+                <!-- choix de la couleur-->
+                <label for="choiceColor">Choississez votre première couleur:</label>
+                <input type="color" name="choiceColor" value="#aff222">
+                <label for="choiceColor2">Choississez votre deuxième couleur:</label>
+                <input type="color" name="choiceColor2" value="#add666">
+
+                <!-- Choix de l'option du gradiant-->
+                <label for="selectGradiant">Choissisez le type de radiant :</label>
+                <select name="typeGradiant" id="selectGradiant">
+                    <option value="vertical">Vertical</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="angulaire">Angulaire</option>
+                    <option value="central">Central</option>
+                </select>
+
+                <!-- Bouton génération -->
+                <button type="button">Générer</button>
+            </form>
+        </section>
     </main>
     <footer>
 
@@ -33,7 +64,8 @@
             <!-- Twitter -->
             <a href="https://twitter.com"><img src="medias/images/rs/twitter.jpg" alt="Icone twitter"></a>
             <!-- Instagram -->
-            <a href="https://www.instagram.com/margaumette"><img src="medias/images/rs/instagram.png" alt="Icone instagram"></a>
+            <a href="https://www.instagram.com/margaumette"><img src="medias/images/rs/instagram.png"
+                    alt="Icone instagram"></a>
         </article>
 
         <!-- Citation -->
@@ -46,12 +78,16 @@
         <article>
             <p>Powered by</p>
             <!-- HTML -->
-            <a href="https://developer.mozilla.org/fr/docs/Web/HTML"><img src="medias/images/icones/HTML.png" alt="Icone HTML"></a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/HTML"><img src="medias/images/icones/HTML.png"
+                    alt="Icone HTML"></a>
             <!-- CSS -->
-            <a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img src="medias/images/icones/CSS.png" alt="Icone CSS"></a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img src="medias/images/icones/CSS.png"
+                    alt="Icone CSS"></a>
             <!-- JS -->
-            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript"><img src="medias/images/icones/JS.png" alt="Icone JS"></a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript"><img src="medias/images/icones/JS.png"
+                    alt="Icone JS"></a>
         </article>
     </footer>
 </body>
+
 </html>
