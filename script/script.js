@@ -16,11 +16,13 @@ const tailleP = document.querySelectorAll('p');
 *******************************************/
 
 function plus(tailleP, onlyNb) {
-    tailleP.style.fontSize = (onlyNb + 3) + 'px';
+    // 16px est la taille de base et +4 est égale à une augmentation de 25%
+    tailleP.style.fontSize = (onlyNb + 4) + 'px';
 }
 
 function moins(tailleP, onlyNb) {
-    tailleP.style.fontSize = (onlyNb - 3) + 'px';
+    // 16px est la taille de base et -4 est égale à une diminution de 25%
+    tailleP.style.fontSize = (onlyNb - 4) + 'px';
 }
 
 /*********************************************
