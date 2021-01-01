@@ -2,9 +2,15 @@
     box-sizing: border-box;
 }
 
-/* Fond avec rayure et dégradé */
 body {
-    background:repeating-linear-gradient(45deg, rgb(245, 202, 177) 25%, rgb(245, 202, 177) 25%, rgb(235, 162, 117) 50%, rgb(233, 210, 196) 50%, rgb(235, 162, 117) 75%, rgb(233, 210, 196) 75%);    background-size: 10px 10px;
+    /* Changez le fond du site : */
+    background-color: rgb(245, 206, 135);
+}
+
+/* Fond avec rayure et dégradé */
+main {
+    background:repeating-linear-gradient(45deg, rgba(245, 202, 177, 0.3) 25%, rgba(245, 202, 177, 0.3) 25%, rgba(235, 162, 117, 0.9) 50%, rgba(233, 210, 196, 0.3) 50%, rgba(235, 162, 117, 0.9) 75%, rgba(233, 210, 196, 0.3) 75%);
+    background-size: 10px 10px;
 }
 
 
