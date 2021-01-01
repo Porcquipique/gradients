@@ -6,3 +6,19 @@ img {
     height: auto;
     width: 50px;
 }
+
+/*************************************
+*               Lien
+*************************************/
+
+a:hover {
+    color: cadetblue;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:link {
+    color: black;
+}
