@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0 10% 0 10%;
 }
 
 body {
@@ -8,12 +7,16 @@ body {
     background-color: rgb(245, 206, 135);
 }
 
+p {
+    text-align: justify;
+}
+
 /* Fond avec rayure et dégradé */
 main {
     background:repeating-linear-gradient(45deg, rgba(245, 202, 177, 0.3) 25%, rgba(245, 202, 177, 0.3) 25%, rgba(235, 162, 117, 0.9) 50%, rgba(233, 210, 196, 0.3) 50%, rgba(235, 162, 117, 0.9) 75%, rgba(233, 210, 196, 0.3) 75%);
     background-size: 10px 10px;
+    margin: 0 1% 0 1%;
 }
-
 
 /* Modifier img aprés inté contenue*/
 img {
@@ -26,7 +29,7 @@ img {
 *************************************/
 
 a:hover {
-    color: cadetblue;
+    color:blue;
 }
 
 a:visited {

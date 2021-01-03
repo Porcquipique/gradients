@@ -11,6 +11,13 @@ const buttonMoins = document.querySelector('button:nth-of-type(2)');
 //Node list
 const tailleP = document.querySelectorAll('p');
 
+//Vérification si la personne n'a pas déjà zoomer ou dé-zoomer
+let c = 0;
+/*  -1  dé-zoomer 
+    0   valeur de départ
+    1   zoommer
+*/
+
 /*******************************************
 * Fonction modification taille
 *******************************************/
@@ -30,19 +37,31 @@ function moins(tailleP, onlyNb) {
 *********************************************/
 
 buttonPlus.addEventListener('click', () => {
-    const i = window.getComputedStyle(document.querySelector('p')).fontSize;
-    const nbI = parseFloat(i);
-    tailleP.forEach((element) => {
-        plus(element, nbI);
-        console.log(element.style.fontSize);
-    });
+    // Vérification si la personne n'a pas déjà appuyé sur +
+    if (c <= 0){
+        const i = window.getComputedStyle(document.querySelector('p')).fontSize;
+        const nbI = parseFloat(i);
+        tailleP.forEach((element) => {
+            plus(element, nbI);
+            console.log(element.style.fontSize);
+        });
+        //Ajout de 1 pour dire qu'on a zoomer une fois
+        c += 1;
+    }
+    console.log(c);
 });
 
 buttonMoins.addEventListener('click', () => {
-    const i = window.getComputedStyle(document.querySelector('p')).fontSize;
-    const nbI = parseFloat(i);
-    tailleP.forEach((element) => {
-        moins(element, nbI);
-        console.log(element.style.fontSize);
-    });
+    // Vérification si la personne n'a pas déjà appuyé sur -
+    if (c >= 0){
+        const i = window.getComputedStyle(document.querySelector('p')).fontSize;
+        const nbI = parseFloat(i);
+        tailleP.forEach((element) => {
+            moins(element, nbI);
+            console.log(element.style.fontSize);
+        });
+        //Soustraction de 1 pour dire qu'on a dé-zoomer une fois
+        c -= 1;
+    }
+    console.log(c);
 });
