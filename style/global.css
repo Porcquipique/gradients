@@ -2,3 +2,24 @@
     box-sizing: border-box;
     margin: 0 10% 0 10%;
 }
+
+img {
+    height: auto;
+    width: 50px;
+}
+
+/*************************************
+*               Lien
+*************************************/
+
+a:hover {
+    color: cadetblue;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:link {
+    color: black;
+}
