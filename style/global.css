@@ -1,8 +1,4 @@
 * {
     box-sizing: border-box;
-}
-
-img {
-    height: auto;
-    width: 50px;
+    margin: 0 10% 0 10%;
 }
