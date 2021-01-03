@@ -1,0 +1,1 @@
+generator model : https://www.geeksforgeeks.org/how-to-create-linear-gradient-color-generator-using-html-css-and-javascript/
