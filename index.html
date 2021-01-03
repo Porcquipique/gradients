@@ -23,30 +23,129 @@
     <main>
         <!-- Explication gradient -->
         <section>
-            <!-- Gradients -->
-            <article id="Default">
-                <p></p>
+            <!-- Gradients def -->
+            <article>
+                <h2>Qu’est-ce qu’un dégradé ?</h2>
+                <p>Les gradients sont des éléments CSS du type image. Ils montrent une transition entre deux couleurs au minimum, mais il peut y en avoir plus. Les gradients peuvent être utilisés aux mêmes endroits que des images. Ils sont généralement utilisés en arrière-plan. Leurs utilisations sont de plus en plus courantes, car ils peuvent être à la fois simples et très complexes, suivant le nombre de couleurs et la technique utilisée (radiale, linaire, …). 
+                    Les gradients se trouvent dans la propriété CSS : background-image. 
+                    </p>
             </article>
 
-            <!-- Linaire gradients -->
-            <article id="Linaire">
-                <p></p>
+            <!-- Linaire -->
+            <article>
+                <h2>Les linaires</h2>
+                <p>Ils se produisent le long d’une ligne droite déterminée par un angle ou une direction. De base, il y a deux couleurs et une direction, mais il peut y avoir une multitude de directions et de couleurs pour faire des formes simples comme des formes complexes par exemple.</p>
+                    
+                    <h3>Comment les coder ?</h3>
+                    <p>linear-gradient(direction, couleur_depart,couleur_suivante,..., couleur_arrivée) ;</p>
+                    <p>Ici, nous avons un dégradé linéaire qui part d’une couleur A vers une couleur B.</p>
+                    <p>La direction peut être de plusieurs formes :</p>
+                    <ul>
+                        <li>en degrés (deg)</li>
+                        <li>to right/ to left</li>
+                        <li>to bottom right</li>
+                    </ul>
+
+                    <h3>Les angles</h3>
+                    <p>L’angle est spécifié entre une ligne verticale et une ligne de dégradé, dans le sens inverse des exemples suivants :</p>
+                    <!-- Img rouge -->
+                    <img src="" alt="">
+                    <p>background: linear-gradient(&lt;angle&gt;, red, white);</p>
+                    
+                    <h3>Point d’arrêt</h3>
+                    <p>Un point d’arrêt est l’endroit où une couleur doit s’arrêter sur un gradient. Elle est définie à la suite de la couleur par un pourcentage allant de 0 à 100. Elle permet de faire des transitions et de gérer l’espacement entre deux couleurs d’un gradient.</p>
+                   
+                    <h3>Les lignes franches</h3>
+                    <p>Pour créer une ligne franche entre deux couleurs, il suffit de mettre le point d’arrêt au même endroit.</p>
+                    <!-- Img ligne franche -->
+                    <p>background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);</p>
+                    <img src="" alt="">
+                <p>background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);</p>
+                <p>Ici, nous avons un dégradé linéaire qui part à 90 degrés vers la droite. Il est constitué d’une couleur A(#020024) qui passe à la couleur B(#090979) à 35% du gradient, il finit sur une couleur C(#00d4ff) à 100% de la zone.</p>
+                <!-- Img ligne linéaire -->
+                <img src="" alt="">
             </article>
 
-            <!--  -->
-            <article id="">
+            <!-- radiants -->
+            <article>
+                <h2>Les radiants</h2>
+                <p>Plus rare dans son utilisation, car plus complexe à comprendre au début. Les dégradés radiaux sont, au niveau du code, similaires à leurs frères les dégradés linaires. Contrairement aux dégradés linaires, nous pouvons régler la taille des dégradés au lieu de leur direction, cette option peut donner bien plus de résultat amusant.</p>
+                <p>radial-gradient(forme, couleur_depart,couleur_suivante,..., couleur_arrivée) ;</p>
+                <ul>
+                    <li>Angulaire</li>
+                    <li>Central</li>
+                    <li>Horizontal</li>
+                    <li>Vertical</li>
+                </ul>
+                <p>background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);</p>
+                <p>Ici, nous avons un dégradé radial qui part en cercle. Il est constitué d’une couleur A(#5c0067) qui passe à la couleur B(#5c0067) à 100% de la zone.</p>
+                <img src="" alt="">
+                    <h3>Note</h3>
+                    <p>La méthode pour positionner les points d’arrêts est identique aux dégradés linéaires.</p>
 
+                    <h3>Positionner le centre </h3>
+                    <p>Elle est définie par des mots clés tels que :</p>
+                    <h4>Pour les ellipses</h4>
+                    <ul>
+                        <li>Closest-side</li>
+                            <ul>
+                                <li>Est utilisé pour régler la taille du radiant entre un point central de départ et le côté le plus proche.</li>
+                                <li>background: radial-gradient(ellipse closest-side, red, yellow 10%, #1e90ff 50%, beige);</li>
+                                <li><img src="" alt=""></li>
+                            </ul>
+                        <li>farthest-corner</li>
+                            <ul>
+                                <li>Créé un dégradé dont la distance est celle entre le point départ central et le côté le plus éloigné.</li>
+                                <li>background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1e90ff 50%, beige);</li>
+                                <li><img src="" alt=""></li>
+                            </ul>
+                    </ul>
+                    <h4>Pour les cercles</h4>
+                    <ul>
+                        <li>Closest-side</li>
+                        <ul>
+                            <li>Permet de créer un cercle dont le rayon est la distance entre le point de départ et le coté le plus proche.</li>
+                            <li>background: radial-gradient(circle closest-side, red, yellow 10%, #1e90ff 50%, beige);</li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                    </ul>
+
+                    <h3>Conique</h3>
+                    <p>Les couleurs sont générées progressivement autour d’un cercle.</p>
+                    <p>background: conic-gradient(red, blue);</p>
+                    <img src="" alt="">
+
+                    <p>On peut positionner le centre avec le mot-clé at.</p>
+                    <p>background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);</p>
+                    <img src="" alt="">
+
+                    <p>On peut également modifier l’angle du radient conique.</p>
+                    <p>background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);</p>
+                    <img src="" alt="">
             </article>
 
-            <!--  -->
-            <article id="">
-
+            <!-- Pour aller plus loin -->
+            <article>
+                <h2>Pour aller plus loins :</h2>
+                <a href="https://projects.verou.me/css3patterns/">Idées pattern</a>
             </article>
             
-            <!--  -->
-            <article id="">
-
+            <!-- Source -->
+            <article>
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://iutdijon.u-bourgogne.fr/mmimoodle/mod/book/view.php?id=155&chapterid=210">MMI Moodle - Cours gradiant</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_gradients.asp">W3schools - Gradients</a></li>
+                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/linear-gradient()">Dev mozilla - Linear gradient</a></li>
+                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/gradient">Dev mozilla - gradient</a></li>
+                    <li><a href="https://cssgradient.io/">CSS gradient - Générateur</a></li>
+                </ul>
             </article>
+        </section>
+
+        <!-- Generator -->
+        <section>
+
         </section>
     </main>
     <footer>
