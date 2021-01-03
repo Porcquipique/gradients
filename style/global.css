@@ -15,7 +15,8 @@ p {
 main {
     background:repeating-linear-gradient(45deg, rgba(245, 202, 177, 0.3) 25%, rgba(245, 202, 177, 0.3) 25%, rgba(235, 162, 117, 0.9) 50%, rgba(233, 210, 196, 0.3) 50%, rgba(235, 162, 117, 0.9) 75%, rgba(233, 210, 196, 0.3) 75%);
     background-size: 10px 10px;
-    margin: 0 1% 0 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 /* Modifier img aprés inté contenue*/
@@ -28,14 +29,11 @@ img {
 *               Lien
 *************************************/
 
-a:hover {
-    color:blue;
-}
-
 a:visited {
     color: brown;
 }
 
 a:link {
     color: black;
+    text-decoration:none; 
 }

@@ -1,7 +1,7 @@
 footer {
     /* Init grid footer */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr auto 1fr;
 
     /* Style article */
     text-align: center;
@@ -16,17 +16,38 @@ footer>article:nth-of-type(1){
     grid-column: 1;
 }
 
+footer>article:nth-of-type(1)>a>p {
+    text-align: center;
+}
+
+footer>p:nth-of-type(1){
+    grid-column: 2;
+}
+
 /* Citation */
 footer>article:nth-of-type(2){
-    grid-column: 2;
+    grid-column: 3;
+}
+
+footer>p:nth-of-type(2){
+    grid-column: 4;
 }
 
 /* Lien techno dev site */
 footer>article:nth-of-type(3){
-    grid-column: 3;
+    grid-column: 5;
 }
 
 img {
     height: auto;
     width: 20%;
+}
+
+/*************************************
+*          barre verticale
+*************************************/
+
+footer>p {  
+    border-right: 0.05rem solid black;
+    text-align: center;
 }
