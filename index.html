@@ -221,20 +221,24 @@ Pourquoi les divs? Pour mettre mes background-image en illustration.
 
                 <!-- choix de la couleur-->
                 <label for="choiceColor">Choississez vos couleurs:</label>
-                <input type="color" name="choiceColor" value="#aff222">
-                <input type="color" name="choiceColor" value="#add666">
+                <input type="color" name="choiceColor">
+                <input type="color" name="choiceColor" value="#ff0587">
 
                 <!-- Choix de l'option du gradiant-->
-                <label for="selectGradiant">Choissisez le type de radiant :</label>
-                <select name="typeGradiant" id="selectGradiant">
-                    <option value="angulaire">Angulaire</option>
-                    <option value="central">Central</option>
-                    <option value="horizontal">Horizontal</option>
-                    <option value="vertical">Vertical</option>
+                <label for="effectGradiant">Choissisez du dégradé :</label>
+                <select name="effectGradiant" id="effectGradiant">
+                    <option value="0">Conique</option>
+                    <option value="1">Central</option>
+                    <option value="2">Horizontal</option>
+                    <option value="3">Vertical</option>
                 </select>
 
                 <!-- Bouton génération -->
                 <button type="button">Générer</button>
+                <!-- Affiche résultat - Illustration -->
+                <div></div>
+                <!-- Affiche résultat - Code -->
+                <p></p>
             </form>
         </section>
     </main>

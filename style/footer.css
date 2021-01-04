@@ -50,4 +50,5 @@ img {
 footer>p {  
     border-right: 0.05rem solid black;
     text-align: center;
+    width: 100%;
 }
