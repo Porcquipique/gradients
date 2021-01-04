@@ -5,11 +5,11 @@
 *******************************************/
 
 // Def des button + et -
-const buttonPlus = document.querySelector('button:nth-of-type(1)');
-const buttonMoins = document.querySelector('button:nth-of-type(2)');
+const buttonPlus = document.querySelector('button:nth-of-type(2)');
+const buttonMoins = document.querySelector('button:nth-of-type(1)');
 
 //Node list
-const tailleP = document.querySelectorAll('p');
+const tailleP = document.querySelectorAll('p, li');
 
 //Vérification si la personne n'a pas déjà zoomer ou dé-zoomer
 let c = 0;
