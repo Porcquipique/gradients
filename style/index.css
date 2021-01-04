@@ -27,27 +27,27 @@ div {
 /* Div gradient - angles */
 /* 0 deg */
 main>section:nth-of-type(1)>article:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(1) {
-    background: linear-gradient(0deg, red, white);
+    background: linear-gradient(0deg, rgb(255, 0, 0), rgb(255, 255, 255));
 }
 
 /* 90 deg */
 main>section:nth-of-type(1)>article:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(2) {
-    background: linear-gradient(90deg, red, white);
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 255, 255));
 }
 
 /* 180 deg */
 main>section:nth-of-type(1)>article:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(3) {
-    background: linear-gradient(180deg, red, white);
+    background: linear-gradient(180deg,  rgb(255, 0, 0), rgb(255, 255, 255));
 }
 
 /* -90 deg */
 main>section:nth-of-type(1)>article:nth-of-type(2)>article:nth-of-type(1)>div:nth-of-type(4) {
-    background: linear-gradient(-90deg, red, white);
+    background: linear-gradient(-90deg,  rgb(255, 0, 0), rgb(255, 255, 255));
 }
 
 /* Div gradient - ligne franche */
 main>section:nth-of-type(1)>article:nth-of-type(2)>div:nth-of-type(1) {
-    background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+    background: linear-gradient(to bottom left, rgb(0, 255, 255) 50%, rgb(238, 232, 170) 50%);
 }
 
 /* Div gradient - ligne linéaire */
@@ -62,32 +62,38 @@ main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(1) {
 
 /* Div gradient - closest-side */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(2) {
-    background: radial-gradient(ellipse closest-side, red, yellow 10%, #1e90ff 50%, beige);
+    background: radial-gradient(ellipse closest-side, rgb(255, 0, 0), rgb(255, 255, 0) 10%, #1e90ff 50%, rgb(245, 245, 220));
 }
 
 /* Div gradient - farthest-corner */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(3) {
-    background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1e90ff 50%, beige);
+    background: radial-gradient(ellipse farthest-corner, rgb(255, 0, 0), rgb(255, 255, 0) 10%, #1e90ff 50%, rgb(245, 245, 220));
 }
 
 /* Div gradient - circle */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(4) {
-    background: radial-gradient(circle closest-side, red, yellow 10%, #1e90ff 50%, beige);
+    background: radial-gradient(circle closest-side, rgb(255, 0, 0) , rgb(255, 255, 0) 10%, #1e90ff 50%, rgb(245, 245, 220));
 }
 
+
+/*
+ * Le W3C validator me dis que conic-gradient n'est pas un background image ni color alors que je l'ai mis dans un background
+ * de plus, sur le site dev mozilla, ils le mettent sur un background. 
+ */
+ 
 /* Div gradient Conique - exemple */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(5) {
-    background: conic-gradient(red, blue);
+    background: conic-gradient(rgb(255, 0, 0), rgb(0, 0, 255));
 }
 
 /* Div gradient Conique - at */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(6) {
-    background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+    background: conic-gradient(at 0% 30%, rgb(255, 0, 0) 10%, rgb(255, 255, 0) 30%, #1e90ff 50%);
 }
 
 /* Div gradient Conique - angle */
 main>section:nth-of-type(1)>article:nth-of-type(3)>div:nth-of-type(7) {
-    background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
+    background: conic-gradient(from 45deg, rgb(255, 0, 0), rgb(255, 165, 0), rgb(255, 255, 0), rgb(0, 128, 0), rgb(0, 0, 255), rgb(128, 0, 128));
 }
 
 /*************************************
